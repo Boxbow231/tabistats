@@ -54,3 +54,4 @@ FROM
     flight_prices
 GROUP BY 
     DATE(fetch_datetime), departure_date, destination_airport;
+    
