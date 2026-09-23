@@ -1,7 +1,7 @@
 <?php
 header('Content-Type: application/json');
 
-require_once 'db_config.php';
+require_once '../php_sql/db_config.php';
 
 $host = 'localhost';
 $db = 'tabistats';
