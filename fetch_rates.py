@@ -1,12 +1,18 @@
+import os
 import requests
 import mysql.connector
 from mysql.connector import Error
 from datetime import datetime
 
+from dotenv import load_dotenv
+load_dotenv()
+
+SERPAPI_KEY = os.getenv("SERPAPI_KEY")
+
 DB_CONFIG = {
     'host': 'localhost',
-    'user': 'giguerr231',
-    'password': 'Miashs2025', 
+    'user': os.getenv("DB_USER"),
+    'password': os.getenv("DB_PASS"),
     'database': 'tabistats'
 }
 

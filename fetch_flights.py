@@ -5,12 +5,15 @@ import mysql.connector
 from mysql.connector import Error
 from serpapi import GoogleSearch
 
-SERPAPI_KEY = "2ab455ebf6cd672fc7bb24430283fd6f52bcd33f86bf7fd5ba99e2b82695d838"
+from dotenv import load_dotenv
+load_dotenv()
+
+SERPAPI_KEY = os.getenv("SERPAPI_KEY")
 
 DB_CONFIG = {
     'host': 'localhost',
-    'user': 'giguerr231',
-    'password': 'Miashs2025', 
+    'user': os.getenv("DB_USER"),
+    'password': os.getenv("DB_PASS"),
     'database': 'tabistats'
 }
 
