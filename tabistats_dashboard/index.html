@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TabiStats - Préparation Japon</title>
-    <!-- Importation de Chart.js pour les graphiques -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         body {
@@ -14,18 +14,22 @@
             margin: 0;
             padding: 20px;
         }
+
         .header {
             text-align: center;
             margin-bottom: 30px;
         }
+
         h1 {
             color: #2c3e50;
             margin-bottom: 5px;
         }
+
         .subtitle {
             color: #7f8c8d;
             font-size: 1.1em;
         }
+
         .dashboard {
             display: flex;
             flex-direction: column;
@@ -33,12 +37,14 @@
             max-width: 1000px;
             margin: 0 auto;
         }
+
         .card {
             background: #fff;
             padding: 20px;
             border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
         }
+
         .card h2 {
             margin-top: 0;
             font-size: 1.2em;
@@ -47,42 +53,48 @@
             padding-bottom: 10px;
             margin-bottom: 20px;
         }
+
         .chart-container {
             position: relative;
             height: 350px;
             width: 100%;
         }
+
         .filters {
-            margin-top: 20px; 
-            padding: 15px; 
-            background: #fff; 
-            border-radius: 8px; 
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05); 
-            display: inline-flex; 
-            gap: 15px; 
+            margin-top: 20px;
+            padding: 15px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            display: inline-flex;
+            gap: 15px;
             align-items: center;
         }
-        .filters select, .filters input {
-            padding: 8px; 
-            border-radius: 4px; 
+
+        .filters select,
+        .filters input {
+            padding: 8px;
+            border-radius: 4px;
             border: 1px solid #ccc;
         }
+
         .filters button {
-            padding: 8px 15px; 
-            background: #3498db; 
-            color: white; 
-            border: none; 
-            border-radius: 4px; 
+            padding: 8px 15px;
+            background: #3498db;
+            color: white;
+            border: none;
+            border-radius: 4px;
             cursor: pointer;
         }
     </style>
 </head>
+
 <body>
 
     <div class="header">
         <h1>✈️ TabiStats Dashboard</h1>
         <div class="subtitle">Suivi du budget de voyage dynamique</div>
-        
+
         <!-- Panneau de filtres -->
         <div class="filters">
             <select id="countrySelect">
@@ -96,7 +108,7 @@
             </select>
 
             <input type="date" id="travelDate" value="2027-07-03">
-            
+
             <button id="updateBtn">Actualiser</button>
         </div>
     </div>
@@ -121,4 +133,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>

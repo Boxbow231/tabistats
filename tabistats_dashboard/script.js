@@ -25,7 +25,7 @@ const countryCurrency = {
 function updateAirportList() {
     const country = document.getElementById("countrySelect").value;
     const airportSelect = document.getElementById("airportSelect");
-    
+
     airportSelect.innerHTML = "";
     destinations[country].forEach(airport => {
         const option = document.createElement("option");
@@ -44,7 +44,7 @@ function loadDashboardData() {
     fetch(`api.php?airport=${airport}&date=${date}&currency=${currency}`)
         .then(response => response.json())
         .then(data => {
-            if(data.error) return console.error("Erreur:", data.error);
+            if (data.error) return console.error("Erreur:", data.error);
             initYenChart(data.currencies);
             initFlightChart(data.flights);
         })
@@ -54,16 +54,16 @@ function loadDashboardData() {
 document.addEventListener("DOMContentLoaded", () => {
     updateAirportList();
     loadDashboardData();
-    
+
     document.getElementById("countrySelect").addEventListener("change", () => {
         updateAirportList();
         loadDashboardData();
     });
-    
+
     document.getElementById("airportSelect").addEventListener("change", loadDashboardData);
-    
+
     // Vérification du samedi
-    document.getElementById("travelDate").addEventListener("change", function() {
+    document.getElementById("travelDate").addEventListener("change", function () {
         const selectedDate = new Date(this.value);
         if (selectedDate.getDay() !== 6) { // 6 = Samedi
             alert("Merci de sélectionner un samedi (les relevés sont uniquement basés sur les départs du samedi).");
