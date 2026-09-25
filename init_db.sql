@@ -30,18 +30,6 @@ CREATE TABLE flight_prices (
     stops_return INT NOT NULL DEFAULT 0
 );
 
-CREATE TABLE accommodations (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    fetch_datetime DATETIME DEFAULT CURRENT_TIMESTAMP,
-    
-    city VARCHAR(100) NOT NULL,             -- ex: 'Tokyo', 'Kyoto', 'Osaka'
-    stay_date DATE NOT NULL,                -- La nuit concernee
-    accommodation_type VARCHAR(50) NOT NULL,-- ex: 'Hotel', 'Ryokan', 'Capsule', 'Airbnb'
-    
-    average_price_eur DECIMAL(8, 2) NOT NULL,
-    data_source VARCHAR(100)                -- ex: 'Booking.com API', 'Scraping'
-);  
-
 CREATE VIEW v_daily_flight_trends AS
 SELECT 
     DATE(fetch_datetime) as extraction_day,
