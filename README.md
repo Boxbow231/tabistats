@@ -72,3 +72,5 @@ Ouvrez votre navigateur et accédez à http://localhost/tabistats/ pour interagi
   Le but de ce projet est d'analyser l'évolution des prix des billets d'avion afin de déterminer la période optimale d'achat. L'objectif concret est d'optimiser le budget de mon prochain voyage de 3 semaines au Japon (prévu pour l'été 2027), un pays qui m'a fasciné lors d'un précédent séjour de 16 jours.
 
 (Pour l'anecdote, "Tabi" signifie "voyage" en japonais).
+
+!!! Je dois modifier les liens entre chaque fichier (sauf pour le dossier avec le php/htm/css) pour que ça fonctionne, au sinon mettez tout dans le même dossier (sauf le dossier avec le html...)!!!
